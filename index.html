@@ -74,7 +74,7 @@
   <div class="hero-content">
     <h1 class="hero-title">Es-tu fait·e pour la <span>Santé Publique ?</span></h1>
     <div class="hero-divider"></div>
-    <p class="hero-sub">9 questions pour voir si elle pourrait être faite pour toi</p>
+    <p class="hero-sub">9 questions pour voir si elle pourrait être faite pour toi — sans bonne ni mauvaise réponse.</p>
     <button class="btn-start" onclick="startQuiz()">Je me lance →</button>
     <div class="meta-pills">
       <span class="meta-pill">⏱ ~3 minutes</span>
@@ -113,7 +113,7 @@ var questions = [
     text: "Tu travailles mieux...",
     answers: [
       { text: "Seul·e, concentré·e sur mon patient", pts: 0 },
-      { text: "En équipe pluridisciplinaire (médecins, juristes, sociologues, élus...)", pts: 2 },
+      { text: "En équipe pluridisciplinaire (médecins, sociologues, informaticiens, élus...)", pts: 2 },
       { text: "En réunion — oui, j'aime les réunions, ça existe", pts: 2 },
       { text: "Peu importe tant qu'il y a du café ☕", pts: 1 }
     ]
@@ -125,14 +125,6 @@ var questions = [
       { text: "Comprendre pourquoi elle en est arrivée là", pts: 1 },
       { text: "Chercher combien d'autres sont dans le même cas", pts: 2 },
       { text: "Google 🔍", pts: 0 }
-    ]
-  },
-  {
-    text: "L'idée de travailler avec des non-médecins (politiques, urbanistes, associations...) te...",
-    answers: [
-      { text: "Perturbe, je préfère rester entre médecins", pts: 0 },
-      { text: "Enthousiasme — c'est là que les choses changent vraiment", pts: 2 },
-      { text: "Interroge, mais pourquoi pas", pts: 1 }
     ]
   },
   {
@@ -199,14 +191,14 @@ var results = [
     theme: "low"
   },
   {
-    min: 6, max: 11,
+    min: 6, max: 10,
     emoji: "🤔",
     title: "Tu devrais y jeter un œil sérieusement",
     text: "Tu montres une vraie curiosité pour les logiques collectives et l'impact à grande échelle. La santé publique pourrait être une surprise agréable : viens en discuter, tu risques de te reconnaître dans les débouchés qu'on a à te présenter !",
     theme: "mid"
   },
   {
-    min: 12, max: 18,
+    min: 11, max: 16,
     emoji: "🚀",
     title: "Fonce, la santé publique t'attend !",
     text: "Agir sur des milliers de personnes, comprendre les déterminants sociaux, travailler en équipe pluridisciplinaire, peser sur les politiques de santé... Tu coches toutes les cases. La santé publique est une spécialité rare, variée et profondément utile. Viens nous parler au stand !",
@@ -269,7 +261,7 @@ function showResult() {
   }
 
   document.getElementById('result-emoji').textContent = r.emoji;
-  document.getElementById('result-score').textContent = 'Score : ' + score + ' / 18';
+  document.getElementById('result-score').style.display = 'none';
   document.getElementById('result-title').textContent = r.title;
   document.getElementById('result-text').textContent = r.text;
 
