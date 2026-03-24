@@ -101,11 +101,21 @@
     <div class="result-score" id="result-score"></div>
     <div class="result-title" id="result-title"></div>
   </div>
-  <div class="result-body">
+ <div class="result-body">
     <p class="result-text" id="result-text"></p>
-    <p class="stand-invite">🏥 N'hésite pas à passer nous voir au stand pour en discuter !</p>
+    <p class="stand-invite">
+        Si tu veux en savoir plus sur la santé publique à Tours : 
+        <a href="https://med.univ-tours.fr/version-francaise/formations/le-departement-de-sante-publique" target="_blank">
+            https://med.univ-tours.fr/version-francaise/formations/le-departement-de-sante-publique
+        </a> (lien clicable).<br>
+        et sur l'internat de santé publique : 
+        <a href="https://clisp.fr/" target="_blank">https://clisp.fr/</a>.
+    </p>
     <button class="result-cta secondary" onclick="restartQuiz()">↩ Recommencer le quiz</button>
-  </div>
+    <p class="credits" style="font-size: 0.7rem; margin-top: 8px;">
+        réalisé par Hugo Desmars (interne de santé publique) avec l'aide de Claude®
+    </p>
+</div>
 </div>
 
 <script>
@@ -202,7 +212,7 @@ var results = [
     min: 11, max: 16,
     emoji: "🚀",
     title: "Fonce, la santé publique t'attend !",
-    text: "Agir sur des milliers de personnes, comprendre les déterminants sociaux, travailler en équipe pluridisciplinaire, peser sur les politiques de santé... Tu coches toutes les cases. La santé publique est une spécialité rare, variée et profondément utile. Viens nous parler au stand !",
+    text: "Agir sur des milliers de personnes, comprendre les déterminants sociaux, travailler en équipe pluridisciplinaire, peser sur les politiques de santé... Tu coches toutes les cases. La santé publique est une spécialité rare, variée et profondément utile. N'hésite pas à passer en stage ou à cliquer sur les liens pour en savoir plus !",
     theme: "high"
   }
 ];
@@ -275,7 +285,7 @@ function showResult() {
 }
 
 function goToStand() {
-  alert('On vous attend au stand Santé Publique ! 👋');
+  alert('Si tu veux en savoir plus : Santé publique à Tours → https://med.univ-tours.fr/version-francaise/formations/le-departement-de-sante-publique ; Internat de santé publique → https://clisp.fr/');
 }
 
 function restartQuiz() {
